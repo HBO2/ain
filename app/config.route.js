@@ -18,7 +18,7 @@
             controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
-                    $state.go('triangular.admin-default.dashboard-analytics');
+                    $state.go('triangular-no-scroll.email.inbox');
                 };
             }
         })
@@ -30,15 +30,15 @@
             controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
-                    $state.go('triangular.admin-default.dashboard-analytics');
+                    $state.go('triangular-no-scroll.email.inbox');
                 };
             }
         });
 
 
         // set default routes when no path specified
-        $urlRouterProvider.when('', '/dashboards/analytics');
-        $urlRouterProvider.when('/', '/dashboards/analytics');
+        $urlRouterProvider.when('', '/email/inbox');
+        $urlRouterProvider.when('/', '/email/inbox');
 
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');
