@@ -1,0 +1,63 @@
+<md-content class="email-single md-padding">
+    <md-card flex>
+        <md-toolbar class="toolbar-default" md-theme="{{triSkin.elements.toolbar}}">
+            <div layout="row" layout-align="space-between start">
+                <div class="email-single-title" flex>
+                    <h3 class="md-title" flex>{{::vm.email.from.name}}</h3>
+                    <span class="md-subhead">
+                        <span translate>EMAIL.TO</span>
+                        <span ng-repeat="to in vm.email.to">
+                            {{::to.name}}<span ng-if="!$last">,</span>
+                        </span>
+                    </span>
+                    <span class="md-body-2">{{::vm.email.subject}}</span>
+                </div>
+                <div layout="row" >
+                       <md-button class="md-icon-button" style="width:20px" aria-label="Open email interactions menu" ng-click="menuClick($event);$mdOpenMenu();">
+                            <md-icon md-font-icon="icon-edit"></md-icon>
+                        </md-button>
+                    <md-button class="md-icon-button" style="width:20px" aria-label="Open email interactions menu" ng-click="menuClick($event);$mdOpenMenu();">
+                            <md-icon md-font-icon="icon-favorite"></md-icon>
+                        </md-button>
+
+                    <md-menu style="padding: 0px; margin-top:0px">
+                        <md-button class="md-icon-button" style="width:20px" aria-label="Open email interactions menu" ng-click="menuClick($event);$mdOpenMenu();">
+                            <md-icon md-font-icon="icon-more-vert"></md-icon>
+                        </md-button>
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ng-click="vm.emailAction('EMAIL.REPLY')">
+                                    <md-icon md-font-icon="icon-share"></md-icon>
+                                    <span translate>EMAIL.SHARE</span>
+                                </md-button>
+                            </md-menu-item>
+
+
+                            <md-menu-item>
+                                <md-button ng-click="vm.deleteEmail(vm.email)">
+                                    <md-icon md-font-icon="icon-delete"></md-icon>
+                                    <span translate>EMAIL.DELETE</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item>
+                                <md-button ng-click="vm.closeEmail()">
+                                    <md-icon md-font-icon="icon-close"></md-icon>
+                                    <span translate>EMAIL.CLOSE</span>
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
+                </div>
+            </div>
+        </md-toolbar>
+
+        <md-divider></md-divider>
+
+        <md-card-content>
+            <p ng-repeat="paragraph in vm.email.content">{{paragraph}}</p>
+        </md-card-content>
+
+    </md-card>
+</md-content>

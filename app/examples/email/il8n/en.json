@@ -1,0 +1,54 @@
+{
+    "MENU": {
+        "EMAIL": {
+            "EMAIL": "Persons",
+            "INBOX": "Persons",
+            "TRASH": "Favorites",
+            "SENT": "Recent"
+        }
+    },
+    "EMAIL": {
+        "TOOLBAR": {
+            "SEARCH": "Search"
+        },
+        "INBOX": {
+            "TITLE": "",
+            "GROUPS": {
+                "TODAY": "Today",
+                "YESTERDAY": "Yesterday",
+                "OLDER": "Older"
+            }
+        },
+        "COMPOSE": {
+            "FROM": "From",
+            "CC": "CC",
+            "BCC": "BCC",
+            "SUBJECT": "Subject",
+            "SEND": "Send",
+            "VALIDATION": {
+                "EMAIL_REQUIRED": "Please enter an address to send to.",
+                "EMAIL_VALID": "Please enter a valid email address.",
+                "SUBJECT_REQUIRED": "Please enter a subject for the email."
+            }
+        },
+        "TO": "To",
+        "NEW": "Compose",
+        "SENT": "Email to {{to}} sent.",
+        "CANCELED": "Add Persons canceled",
+        "REPLY": "Reply",
+        "REPLY_ALL": "Reply All",
+        "FORWARD": "Forward",
+        "DELETE": "Delete",
+        "DELETED": "Persons Deleted",
+        "RE": "R.e: ",
+        "CLOSE": "Close",
+        "EDIT": "Edit",
+        "SHARE": "Share",
+        "MESSAGE": "Information",
+        "NO_EMAILS_FOUND": "No persons found",
+        "NO_EMAIL_SELECTED": "No persons selected",
+        "REPLY_BOTTOM_SHEET": {
+            "TITLE": "Message Reply"
+        }
+    }
+}
